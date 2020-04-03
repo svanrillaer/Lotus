@@ -1,6 +1,7 @@
 ID: Lotus
 _schema-version: '2.1'
 version: 0.0.1
+<<<<<<< HEAD
 modules:
   - name: db
     type: hdb
@@ -17,3 +18,5 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+=======
+>>>>>>> refs/remotes/origin/master
