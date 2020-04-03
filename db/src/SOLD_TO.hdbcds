@@ -1,0 +1,11 @@
+context SOLD_TO {
+
+/*@@layout{"layoutInfo":{"x":-414,"y":-96.5}}*/
+entity SOLD_TO_TBL {
+	KEY SOLDTOID: String(10);
+		SOLDTODESC: String(255);
+		SOLDTOCOUNTRY: String(2);
+};
+
+};
+
