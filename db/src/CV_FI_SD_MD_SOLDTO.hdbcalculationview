@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_FI_SD_MD_SOLDTO" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Sold To"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="SOLD_TO.SOLD_TO_TBL">
+    <resourceUri>SOLD_TO.SOLD_TO_TBL</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="P_SOLD_TO_SALESORG">
+    <viewAttributes>
+      <viewAttribute id="SOLDTOID"/>
+      <viewAttribute id="SOLDTODESC"/>
+      <viewAttribute id="SOLDTOCOUNTRY"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <restrictedViewAttributes/>
+    <input node="SOLD_TO.SOLD_TO_TBL">
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTOID" source="SOLDTOID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTODESC" source="SOLDTODESC"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SOLDTOCOUNTRY" source="SOLDTOCOUNTRY"/>
+    </input>
+  </calculationView>
+</calculationViews>
+<logicalModel id="P_SOLD_TO_SALESORG">
+  <attributes>
+    <attribute id="SOLDTOID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLDTOID"/>
+      <keyMapping columnObjectName="P_SOLD_TO_SALESORG" columnName="SOLDTOID"/>
+    </attribute>
+    <attribute id="SOLDTODESC" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLDTODESC"/>
+      <keyMapping columnObjectName="P_SOLD_TO_SALESORG" columnName="SOLDTODESC"/>
+    </attribute>
+    <attribute id="SOLDTOCOUNTRY" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SOLDTOCOUNTRY"/>
+      <keyMapping columnObjectName="P_SOLD_TO_SALESORG" columnName="SOLDTOCOUNTRY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="P_SOLD_TO_SALESORG" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="100" y="320"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
